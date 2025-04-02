@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::with("roles")->get();
-        return Inertia::render("user/index", [
+        return Inertia::render("users/index", [
             "users" => $users
         ]);
     }
